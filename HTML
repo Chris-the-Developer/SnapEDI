@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnapEDI – Rethinking EDI for Business</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      max-width: 600px;
+    }
+    header img {
+      width: 160px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    form {
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards ease;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    input, textarea, button {
+      font-size: 1rem;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    input:focus, textarea:focus {
+      border-color: #0074ff;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 116, 255, 0.2);
+    }
+    button {
+      background-color: #0074ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fd4;
+    }
+    #thank-you {
+      display: none;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #0074ff;
+      text-align: center;
+    }
+    .pricing {
+      margin-top: 3rem;
+      max-width: 600px;
+      text-align: center;
+    }
+    .pricing h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .pricing p {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="snap-high-resolution-logo-transparent.png" alt="SnapEDI Logo" style="max-width: 220px; margin-bottom: 1rem;" />
+    <h1>Help Shape the Future of EDI</h1>
+    <p>We’re building SnapEDI – a platform designed around what businesses truly need. Tell us what you wish your EDI provider did better and join the waitlist.</p>
+  </header>
+  <!-- Future integration: connect this form to a backend service like Google Forms, Netlify Forms, or a custom API to handle submissions. -->
+  <form action="#" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Business Email" required />
+    <textarea name="feedback" rows="4" placeholder="What do you wish your EDI provider did better?" required></textarea>
+    <button type="submit">Join the Waitlist</button>
+  </form>
+  <div id="thank-you">Thank you! You’ve been added to the waitlist.</div>
+  <section class="pricing">
+    <h2>Simple, Transparent Pricing</h2>
+    <p><strong>Starter:</strong> €49/month – For small businesses exchanging up to 300 EDI messages</p>
+    <p><strong>Professional:</strong> €149/month – Includes automation, analytics, and up to 2,000 messages</p>
+    <p><strong>Enterprise:</strong> Custom pricing – High volume, integrations, and dedicated support</p>
+    <p><em>SnapEDI is based in The Netherlands and proudly supports European businesses with GDPR-compliant, secure infrastructure.</em></p>
+  </section>
+  <footer>
+    &copy; 2025 SnapEDI. All rights reserved.
+  </footer>
+  <script>
+    const form = document.querySelector('form');
+    const thankYou = document.getElementById('thank-you');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      thankYou.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
