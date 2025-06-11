@@ -1,0 +1,13 @@
+<script>
+  const form = document.querySelector('form');
+  const thankYou = document.createElement('div');
+  thankYou.id = 'thank-you';
+  thankYou.textContent = 'Thank you! You’ve been added to the waitlist.';
+  document.body.appendChild(thankYou);
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // prevent real submit
+    form.style.display = 'none';
+    thankYou.style.display = 'block';
+  });
+</script>
