@@ -1,0 +1,29 @@
+/* Smooth fade-in on load */
+form {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards ease;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add focus styles */
+input:focus, textarea:focus {
+  border-color: #0074ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 116, 255, 0.2);
+}
+
+/* Thank-you message styling */
+#thank-you {
+  display: none;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #0074ff;
+  text-align: center;
+}
